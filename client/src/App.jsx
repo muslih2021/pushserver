@@ -18,7 +18,7 @@ function App() {
           applicationServerKey: urlBase64ToUint8Array(PUBLIC_KEY),
         });
 
-        await fetch("http://localhost:5000/subscribe", {
+        await fetch("https://backendserver-production-2a52.up.railway.app/subscribe", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function App() {
   }, []);
 
   const kirimNotifikasi = () => {
-    fetch("http://localhost:5000/send", {
+    fetch("https://backendserver-production-2a52.up.railway.app/send", {
       method: "POST",
     });
   };
